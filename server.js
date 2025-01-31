@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000", process.env.FRONTEND_URL, 'https://stockpilot-delta.vercel.app/'],
+    origin: ["http://localhost:3000", process.env.FRONTEND_URL, 'https://stockpilot-delta.vercel.app/', 'http://stockpilot-delta.vercel.app/', 'https://stockpilot-delta.vercel.app','http://stockpilot-delta.vercel.app'],
     credentials: true,
   })
 );
