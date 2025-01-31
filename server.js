@@ -23,6 +23,7 @@ app.use(
       "https://stockpilot-delta.vercel.app", // Replace with your frontend URL
       "http://localhost:3000", // Development URL
       process.env.FRONTEND_URL, // You can use this for dynamically setting the origin from .env file
+      "https://stockpilot-1boqumimi-oreva-js-projects.vercel.app"
     ],
     credentials: true, // Allow credentials (cookies, HTTP auth)
   })
