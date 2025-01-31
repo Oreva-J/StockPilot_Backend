@@ -18,7 +18,14 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
-  cors()
+  cors({
+    origin: [
+      "https://stockpilot-delta.vercel.app", // Replace with your frontend URL
+      "http://localhost:3000", // Development URL
+      process.env.FRONTEND_URL, // You can use this for dynamically setting the origin from .env file
+    ],
+    credentials: true, // Allow credentials (cookies, HTTP auth)
+  })
 );
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
